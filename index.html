@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+
+    <title>CinemaSearch</title>
+  </head>
+  <body>
+    <header id="header" class="header-container">
+      <span class="header-arrow inactive">&lt;</span>
+
+      <h1 class="header-title">CinemaSearch</h1>
+      <h1 class="header-title header-title--categoryView inactive">
+        Trendings
+      </h1>
+
+      <form id="searchForm" class="header-searchForm">
+        <input type="text" placeholder="Search Movies..." />
+        <button id="searchBtn">🔍</button>
+      </form>
+    </header>
+
+    <section id="trendingPreview" class="trendingPreview-container">
+      <div class="trendingPreview-header">
+        <h2 class="trendingPreview-title">Trendings</h2>
+        <button class="trendingPreview-btn">See more</button>
+      </div>
+
+      <article class="trendingPreview-movieList"></article>
+    </section>
+
+    <section id="categoriesPreview" class="categoriesPreview-container">
+      <h2 class="categoriesPreview-title">Categorías</h2>
+
+      <article class="categoriesPreview-list"></article>
+    </section>
+
+    <section id="genericList" class="genericList-container inactive"></section>
+
+    <section id="movieDetail" class="movieDetail-container inactive">
+      <h1 class="movieDetail-title"></h1>
+      <span class="movieDetail-score"></span>
+      <p class="movieDetail-description"></p>
+
+      <article class="categories-list"></article>
+
+      <article class="relatedMovies-container">
+        <h2 class="relatedMovies-title">Películas similares</h2>
+
+        <div class="relatedMovies-scrollContainer"></div>
+      </article>
+    </section>
+
+    <footer>
+      <p>
+        By
+        <a
+          href="https://www.linkedin.com/in/emiliano-barea-monetti-781a00231/"
+          class="link"
+          >Emiliano Barea</a
+        >, all the information extracted from
+        <a href="https://www.themoviedb.org/" class="link">The movie db</a>
+      </p>
+    </footer>
+
+    <script src="./src/key.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/nodes.js"></script>
+    <script src="./src/main.js"></script>
+    <script src="./src/navigation.js"></script>
+  </body>
+</html>
