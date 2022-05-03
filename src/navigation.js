@@ -51,7 +51,7 @@ function categoriesPage() {
 
   const [categoryHash, categoryData] = location.hash.split("=");
   const [categoryId, categoryName] = categoryData.split("-");
-  headerCategoryTitle.innerHTML = categoryName;
+  headerCategoryTitle.innerHTML = categoryName + " Movies";
   getMoviesByCategory(categoryId);
 }
 
@@ -69,6 +69,7 @@ function moviesDetails() {
   categoriesPreviewSection.classList.add("inactive");
   genericSection.classList.add("inactive");
   movieDetailSection.classList.remove("inactive");
+  // html.style.background = "#eeeaf2";
   const [categoryHash, movieId] = location.hash.split("=");
 
   getMoviesDetails(movieId);
