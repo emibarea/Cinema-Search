@@ -1,11 +1,11 @@
 // Declaracion de axios
 const api = axios.create({
   baseURL: "https://api.themoviedb.org/3",
-  params: {
-    api_key: API_KEY,
-  },
   headers: {
     "Content-type": "applycation/json;charset=utf-8",
+  },
+  params: {
+    api_key: API_KEY,
   },
 });
 // Utils
@@ -51,13 +51,11 @@ async function getTrendingMoviesPreview() {
   const movies = data.results;
   createMovies(movies, trendingMoviesPreviewList);
 }
-
 async function getCategoriesPreview() {
   const { data } = await api("/genre/movie/list");
   const categories = data.genres;
   createGenres(categories, categoriesPreviewList);
 }
-
 async function getMoviesByCategory(id) {
   const { data } = await api("/discover/movie", {
     params: {
@@ -102,6 +100,3 @@ async function getRelatedMovies(movieId) {
   const relatedMovies = await data.results;
   createMovies(relatedMovies, relatedMoviesContainer);
 }
-// Llamado a funciones de peticion a las API
-getTrendingMoviesPreview();
-getCategoriesPreview();
