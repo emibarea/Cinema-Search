@@ -1,5 +1,8 @@
 // Sections
+const footer = document.querySelector(".footer");
+const bodyContainer = document.querySelector(".body");
 const headerSection = document.querySelector("#header");
+const headerContainer = document.querySelector(".header-container");
 const trendingPreviewSection = document.querySelector("#trendingPreview");
 const categoriesPreviewSection = document.querySelector("#categoriesPreview");
 const genericSection = document.querySelector("#genericList");
