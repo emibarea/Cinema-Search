@@ -470,6 +470,8 @@ footer {
   .genericList-container .movie-container {
     width: 44.5%;
     height: auto;
+    display: flex;
+    justify-content: center;
   }
   /* Movie Detail */
   .movieDetail-container {
